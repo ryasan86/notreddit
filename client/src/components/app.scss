@@ -1,0 +1,35 @@
+@mixin small-width($width: 75%, $marginY: 0, $marginX: auto) {
+  width: $width;
+  margin: $marginY $marginX;
+}
+
+.app-wrap {
+  display: grid;
+  grid-template-columns: 1fr 10fr 1fr;
+  grid-template-rows: 10% auto;
+  grid-template-areas:
+    'navbar navbar navbar'
+    '. page .';
+  height: 100vh;
+  .navbar {
+    grid-area: navbar;
+    height: 60px;
+  }
+  .page {
+    grid-area: page;
+    position: relative;
+    &.columns-9-1 {
+      display: grid;
+      grid-template-columns: 9fr 1fr;
+    }
+    &.not-reddit-form {
+      @include small-width();
+      .onboarding-inner {
+        @include small-width(75%, 10%);
+      }
+    }
+    &.post-details {
+      @include small-width();
+    }
+  }
+}

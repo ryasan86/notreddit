@@ -1,0 +1,96 @@
+// global
+$meta_color: #9a9a9a;
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+.ui.menu .item img.logo {
+  margin-left: 1.5em;
+}
+
+form.ui.segment.form {
+  background-color: #f1f9ff;
+  margin-top: 2em;
+}
+
+form.form:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.votes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e6e6e6;
+  padding: 1em 0;
+  border-radius: 5px;
+}
+
+.ui.grid.posts {
+  margin-top: 2em;
+}
+
+.meta {
+  color: $meta_color;
+}
+
+.ui.grid > .row > .column.votes {
+  display: flex;
+}
+
+ul.ui.list li:before {
+  content: '';
+}
+
+.voters {
+  clear: both;
+  width: 100%;
+}
+
+.thumbnail {
+  height: 75px;
+  width: 75px;
+}
+
+.nav-item {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+
+.empty-space {
+  width: 50vw;
+}
+
+.center-content {
+  text-align: center;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.delete:hover {
+  color: red;
+  cursor: pointer;
+}
